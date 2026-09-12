@@ -1,9 +1,21 @@
-function calculartotalcondescuento(cantidad, preciounitario) {
-    const descuentos = 0.07;
+function calcularTotalConDescuento(cantidadProductos, precioUnitario) {
+    const tasaDescuento = 0.07;
 
-    if (cantidad <= 0 || preciounitario <= 0) {
+    if (cantidadProductos === null || precioUnitario === null) {
         return 0;
     }
 
-    return cantidad * preciounitario * (1 - descuentos);
+    if (typeof cantidadProductos !== 'number' || typeof precioUnitario !== 'number') {
+        return 0;
+    }
+
+    if (!Number.isFinite(cantidadProductos) || !Number.isFinite(precioUnitario)) {
+        return 0;
+    }
+
+    if (cantidadProductos <= 0 || precioUnitario <= 0) {
+        return 0;
+    }
+
+    return cantidadProductos * precioUnitario * (1 - tasaDescuento);
 }
