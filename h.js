@@ -19,3 +19,5 @@ function calcularTotalConDescuento(cantidadProductos, precioUnitario) {
 
     return cantidadProductos * precioUnitario * (1 - tasaDescuento);
 }
+
+# hola oscar 
